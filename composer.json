@@ -1,0 +1,39 @@
+{
+    "name": "ssddanbrown/htmltest",
+    "description": "HTML Content Assertions for PHPUnit",
+	"homepage": "https://github.com/ssddanbrown/htmltest",
+	"license": "MIT",
+	"type": "library",
+	"authors": [
+        {
+            "name": "Dan Brown",
+            "email": "ssddanbrown@googlemail.com",
+			"role": "Developer"
+        }
+    ],
+    "require": {
+		"php": ">=7.4",
+		"ext-json": "*",
+		"ext-dom": "*",
+		"phpunit/phpunit": "^9.0",
+		"symfony/css-selector": "^5.0|^6.0",
+		"symfony/dom-crawler": "^5.0|^6.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.10"
+    },
+	"autoload": {
+		"psr-4": {
+			"Ssddanbrown\\HtmlTest\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Ssddanbrown\\HtmlTest\\Tests\\": "tests"
+		}
+	},
+	"scripts": {
+		"test": "vendor/bin/phpunit",
+		"test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+	}
+}
