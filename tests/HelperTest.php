@@ -1,13 +1,13 @@
 <?php namespace Ssddanbrown\AssertHtml\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Ssddanbrown\AssertHtml\AssertHtml;
+use Ssddanbrown\AssertHtml\HtmlTest;
 
 class HelperTest extends TestCase
 {
     public function test_get_outer_html()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <p id="donkey">Hello</p>
             </body>
@@ -21,7 +21,7 @@ class HelperTest extends TestCase
 
     public function test_get_inner_html()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <p id="donkey"><span>Hello</span>There</p>
             </body>

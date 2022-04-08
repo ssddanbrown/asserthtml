@@ -14,7 +14,7 @@ use Symfony\Component\DomCrawler\Crawler;
 use function PHPUnit\Framework\assertCount;
 use function PHPUnit\Framework\assertThat;
 
-class AssertHtml
+class HtmlTest
 {
     protected string $html;
     protected Crawler $crawler;

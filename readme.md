@@ -1,6 +1,6 @@
 # AssertHtml - PHPUnit Assertions for HTML Content
 
-[![Build Status](https://github.com/ssddanbrown/asserthtml/workflows/phpunit/badge.svg)](https://github.com/ssddanbrown/asserthtml/actions)
+[![phpunit](https://github.com/ssddanbrown/htmlassert/actions/workflows/phpunit.yml/badge.svg)](https://github.com/ssddanbrown/htmlassert/actions/workflows/phpunit.yml)
 [![Latest Stable Version](https://poser.pugx.org/ssddanbrown/asserthtml/v)](https://packagist.org/packages/ssddanbrown/asserthtml)
 [![Total Downloads](https://poser.pugx.org/ssddanbrown/asserthtml/downloads)](https://packagist.org/packages/ssddanbrown/asserthtml)
 

@@ -2,14 +2,14 @@
 
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
-use Ssddanbrown\AssertHtml\AssertHtml;
+use Ssddanbrown\AssertHtml\HtmlTest;
 
 class AssertionTest extends TestCase
 {
 
     public function test_assert_element_exists()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <p id="donkey">Hello</p>
                 <p data-test="barry" class="cat">There</p>
@@ -29,7 +29,7 @@ class AssertionTest extends TestCase
 
     public function test_assert_element_count()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <ul>
                 <li>Item A</li>
@@ -48,7 +48,7 @@ class AssertionTest extends TestCase
 
     public function test_assert_element_contains()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <p class="a">Barry was here</p>
                 <div>Barry was not here</div>
@@ -65,7 +65,7 @@ class AssertionTest extends TestCase
 
     public function test_assert_link_exists()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <p id="a"><a href="https://example.com/donkey-a">Click here</a></p>
                 <p id="b"><a href="https://example.com/donkey-b">Click somewhere else</a></p>
@@ -83,7 +83,7 @@ class AssertionTest extends TestCase
 
     public function test_assert_field_has_value()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <input type="text" name="abc" id="def" value="cat">
                 <textarea name="hij" id="klm">dog</textarea>
@@ -100,7 +100,7 @@ class AssertionTest extends TestCase
 
     public function test_assert_field_has_selected()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <select name="abc" id="def">
                     <option value="a">Option A</option>
@@ -127,7 +127,7 @@ class AssertionTest extends TestCase
 
     public function test_assert_checkbox_checked()
     {
-        $html = new AssertHtml('
+        $html = new HtmlTest('
             <body>
                 <input type="checkbox" name="breakfast-a" id="a" value="Beans">
                 <input type="checkbox" name="breakfast-b" id="b" value="Tomato" checked>
