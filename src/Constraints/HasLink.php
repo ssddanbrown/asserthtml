@@ -42,9 +42,7 @@ class HasLink extends PageConstraint
         }
 
         foreach ($links as $link) {
-            $linkText = $link->textContent;
-
-            if ($linkText == $this->url) {
+            if ($link->textContent == $this->text) {
                 return true;
             }
         }

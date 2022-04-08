@@ -4,6 +4,11 @@
 [![Latest Stable Version](https://poser.pugx.org/ssddanbrown/htmltest/v)](https://packagist.org/packages/ssddanbrown/htmltest)
 [![Total Downloads](https://poser.pugx.org/ssddanbrown/htmltest/downloads)](https://packagist.org/packages/ssddanbrown/htmltest)
 
+## TODO
+
+- Add helper trait for Laravel testing.
+- Add examples of all methods to readme.
+
 ## Installation
 
 You can install the package via composer:

@@ -78,9 +78,9 @@ class HtmlTest
     /**
      * Assert that a given link is not seen on the page.
      */
-    public function assertLinkNotExists(string $text, string $url = null): self
+    public function assertLinkNotExists(string $url, string $text = null): self
     {
-        return $this->assertInPage(new HasLink($text, $url), true);
+        return $this->assertInPage(new HasLink($url, $text), true);
     }
 
     /**
@@ -152,7 +152,7 @@ class HtmlTest
     public function getOuterHtml(?string $selector = null): string
     {
         if (!$selector) {
-            return $this->html;
+            return trim($this->html);
         }
 
         return $this->crawler->filter($selector)->first()->outerHtml();
