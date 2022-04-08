@@ -1,6 +1,6 @@
 <?php
 
-namespace Ssddanbrown\HtmlTest\Constraints;
+namespace Ssddanbrown\AssertHtml\Constraints;
 
 use Symfony\Component\DomCrawler\Crawler;
 

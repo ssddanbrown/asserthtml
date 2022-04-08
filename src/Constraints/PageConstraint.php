@@ -1,6 +1,6 @@
 <?php
 
-namespace Ssddanbrown\HtmlTest\Constraints;
+namespace Ssddanbrown\AssertHtml\Constraints;
 
 use PHPUnit\Framework\Constraint\Constraint;
 use PHPUnit\Framework\ExpectationFailedException;

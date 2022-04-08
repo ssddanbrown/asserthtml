@@ -1,20 +1,20 @@
 <?php
 
-namespace Ssddanbrown\HtmlTest;
+namespace Ssddanbrown\AssertHtml;
 
-use Ssddanbrown\HtmlTest\Constraints\HasElement;
-use Ssddanbrown\HtmlTest\Constraints\HasInElement;
-use Ssddanbrown\HtmlTest\Constraints\HasLink;
-use Ssddanbrown\HtmlTest\Constraints\HasValue;
-use Ssddanbrown\HtmlTest\Constraints\IsChecked;
-use Ssddanbrown\HtmlTest\Constraints\IsSelected;
-use Ssddanbrown\HtmlTest\Constraints\PageConstraint;
-use Ssddanbrown\HtmlTest\Constraints\ReversePageConstraint;
+use Ssddanbrown\AssertHtml\Constraints\HasElement;
+use Ssddanbrown\AssertHtml\Constraints\HasInElement;
+use Ssddanbrown\AssertHtml\Constraints\HasLink;
+use Ssddanbrown\AssertHtml\Constraints\HasValue;
+use Ssddanbrown\AssertHtml\Constraints\IsChecked;
+use Ssddanbrown\AssertHtml\Constraints\IsSelected;
+use Ssddanbrown\AssertHtml\Constraints\PageConstraint;
+use Ssddanbrown\AssertHtml\Constraints\ReversePageConstraint;
 use Symfony\Component\DomCrawler\Crawler;
 use function PHPUnit\Framework\assertCount;
 use function PHPUnit\Framework\assertThat;
 
-class HtmlTest
+class AssertHtml
 {
     protected string $html;
     protected Crawler $crawler;

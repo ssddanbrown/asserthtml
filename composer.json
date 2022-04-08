@@ -1,7 +1,7 @@
 {
-    "name": "ssddanbrown/htmltest",
+    "name": "ssddanbrown/asserthtml",
     "description": "HTML Content Assertions for PHPUnit",
-	"homepage": "https://github.com/ssddanbrown/htmltest",
+	"homepage": "https://github.com/ssddanbrown/asserthtml",
 	"license": "MIT",
 	"type": "library",
 	"authors": [
@@ -24,12 +24,12 @@
     },
 	"autoload": {
 		"psr-4": {
-			"Ssddanbrown\\HtmlTest\\": "src"
+			"Ssddanbrown\\AssertHtml\\": "src"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Ssddanbrown\\HtmlTest\\Tests\\": "tests"
+			"Ssddanbrown\\AssertHtml\\Tests\\": "tests"
 		}
 	},
 	"scripts": {
