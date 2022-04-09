@@ -1,6 +1,6 @@
 <?php
 
-namespace Ssddanbrown\HtmlAssert;
+namespace Ssddanbrown\AssertHtml;
 
 /**
  * Trait for usage in Laravel testing.
