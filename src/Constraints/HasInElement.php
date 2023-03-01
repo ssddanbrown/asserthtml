@@ -38,6 +38,10 @@ class HasInElement extends PageConstraint
             if (preg_match("/$pattern/i", $element->html())) {
                 return true;
             }
+
+            if (preg_match("/$pattern/i", $element->text())) {
+                return true;
+            }
         }
 
         return false;
