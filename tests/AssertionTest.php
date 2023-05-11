@@ -7,7 +7,7 @@ use Ssddanbrown\AssertHtml\HtmlTest;
 class AssertionTest extends TestCase
 {
 
-    public function test_assert_element_exists()
+    public function test_assert_element_exists(): void
     {
         $html = new HtmlTest('
             <body>
@@ -27,7 +27,7 @@ class AssertionTest extends TestCase
         $this->assertFailure(fn() => $html->assertElementNotExists('#donkey'));
     }
 
-    public function test_assert_element_count()
+    public function test_assert_element_count(): void
     {
         $html = new HtmlTest('
             <body>
@@ -46,7 +46,7 @@ class AssertionTest extends TestCase
         $this->assertFailure(fn() => $html->assertElementCount('ul', 3));
     }
 
-    public function test_assert_element_contains()
+    public function test_assert_element_contains(): void
     {
         $html = new HtmlTest('
             <body>
@@ -63,7 +63,7 @@ class AssertionTest extends TestCase
         $this->assertFailure(fn() => $html->assertElementNotContains('p', 'Barry was here'));
     }
 
-    public function test_assert_link_exists()
+    public function test_assert_link_exists(): void
     {
         $html = new HtmlTest('
             <body>
@@ -81,7 +81,7 @@ class AssertionTest extends TestCase
         $this->assertFailure(fn() => $html->assertLinkNotExists('https://example.com/donkey-a', 'Click here'));
     }
 
-    public function test_assert_field_has_value()
+    public function test_assert_field_has_value(): void
     {
         $html = new HtmlTest('
             <body>
@@ -98,7 +98,7 @@ class AssertionTest extends TestCase
         $this->assertFailure(fn() => $html->assertFieldNotHasValue('klm', 'dog'));
     }
 
-    public function test_assert_field_has_selected()
+    public function test_assert_field_has_selected(): void
     {
         $html = new HtmlTest('
             <body>
@@ -125,7 +125,7 @@ class AssertionTest extends TestCase
         $this->assertFailure(fn() => $html->assertFieldNotHasSelected('def', 'b'));
     }
 
-    public function test_assert_checkbox_checked()
+    public function test_assert_checkbox_checked(): void
     {
         $html = new HtmlTest('
             <body>

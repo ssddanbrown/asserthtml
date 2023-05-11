@@ -11,7 +11,7 @@ class EdgeCaseTest extends TestCase
     /**
      * Ensure the usage of quote characters through the process remains valid
      */
-    public function test_assert_element_contains_can_match_quotes()
+    public function test_assert_element_contains_can_match_quotes(): void
     {
         $html = new HtmlTest(<<<HTML
             <body>
@@ -34,7 +34,7 @@ class EdgeCaseTest extends TestCase
      * would be auto-escaped on the HTML parser side, then quotes are handled specifically when testing
      * against given text so the two scenarios could conflict and cause trouble.
      */
-    public function test_assert_element_contains_can_match_unambiguous_lone_ampersands_with_quotes()
+    public function test_assert_element_contains_can_match_unambiguous_lone_ampersands_with_quotes(): void
     {
         $html = new HtmlTest(<<<HTML
             <body>

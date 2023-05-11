@@ -23,7 +23,7 @@ class HasText extends PageConstraint
     {
         $pattern = $this->getEscapedPattern($this->text);
 
-        return preg_match("/{$pattern}/i", $this->text($crawler));
+        return (bool) preg_match("/{$pattern}/i", $this->text($crawler));
     }
 
     /**

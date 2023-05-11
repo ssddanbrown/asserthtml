@@ -7,20 +7,20 @@
 	"authors": [
         {
             "name": "Dan Brown",
-            "email": "ssddanbrown@googlemail.com",
+            "homepage": "https://danb.me",
 			"role": "Developer"
         }
     ],
     "require": {
-		"php": ">=7.4",
+		"php": ">=8.1",
 		"ext-json": "*",
 		"ext-dom": "*",
-		"phpunit/phpunit": "^9.0",
-		"symfony/css-selector": "^5.0|^6.0",
-		"symfony/dom-crawler": "^5.0|^6.0"
+		"phpunit/phpunit": "^10.0",
+		"symfony/css-selector": "^6.0",
+		"symfony/dom-crawler": "^6.0"
     },
     "require-dev": {
-        "vimeo/psalm": "^4.10"
+        "phpstan/phpstan": "^1.10"
     },
 	"autoload": {
 		"psr-4": {

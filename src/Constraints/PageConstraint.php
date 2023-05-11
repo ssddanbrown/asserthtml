@@ -11,30 +11,24 @@ abstract class PageConstraint extends Constraint
 {
     /**
      * Make sure we obtain the HTML from the crawler or the response.
-     *
-     * @param Crawler|string  $crawler
      */
-    protected function html($crawler): string
+    protected function html(Crawler|string $crawler): string
     {
         return is_object($crawler) ? $crawler->html() : $crawler;
     }
 
     /**
      * Make sure we obtain the HTML from the crawler or the response.
-     *
-     * @param Crawler|string  $crawler
      */
-    protected function text($crawler): string
+    protected function text(Crawler|string $crawler): string
     {
         return is_object($crawler) ? $crawler->text() : strip_tags($crawler);
     }
 
     /**
      * Create a crawler instance if the given value is not already a Crawler.
-     *
-     * @param Crawler|string  $crawler
      */
-    protected function crawler($crawler): Crawler
+    protected function crawler(Crawler|string $crawler): Crawler
     {
         return is_object($crawler) ? $crawler : new Crawler($crawler);
     }
@@ -57,7 +51,7 @@ abstract class PageConstraint extends Constraint
      *
      * @throws ExpectationFailedException
      */
-    protected function fail($crawler, $description, ComparisonFailure $comparisonFailure = null): void
+    protected function fail($crawler, $description, ComparisonFailure $comparisonFailure = null): never
     {
         $html = $this->html($crawler);
 

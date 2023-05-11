@@ -3,6 +3,7 @@
 namespace Ssddanbrown\AssertHtml\Constraints;
 
 use DOMElement;
+use DOMNode;
 use Symfony\Component\DomCrawler\Crawler;
 
 class IsSelected extends FormFieldConstraint
@@ -46,10 +47,12 @@ class IsSelected extends FormFieldConstraint
     {
         $selected = [];
 
+        /** @var DOMElement $option */
         foreach ($select->children() as $option) {
             if ($option->nodeName === 'optgroup') {
+                /** @var DOMNode $child */
                 foreach ($option->childNodes as $child) {
-                    if ($child->hasAttribute('selected')) {
+                    if ($child instanceof DOMElement && $child->hasAttribute('selected')) {
                         $selected[] = $this->getOptionValue($child);
                     }
                 }
@@ -78,11 +81,14 @@ class IsSelected extends FormFieldConstraint
      */
     protected function getCheckedValueFromRadioGroup(Crawler $radioGroup): ?string
     {
+        /** @var DOMElement $radio */
         foreach ($radioGroup as $radio) {
             if ($radio->hasAttribute('checked')) {
                 return $radio->getAttribute('value');
             }
         }
+
+        return null;
     }
 
     /**

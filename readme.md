@@ -95,7 +95,7 @@ class HtmlTest extends TestCase
 [Psalm](https://psalm.dev/) is included for static analysis. It can be run like so:
 
 ```bash
-./vendor/bin/psalm
+vendor/bin/phpstan
 ```
 
 [PHPUnit](https://phpunit.de/) is used for testing. It can be run like so:

@@ -5,7 +5,7 @@ use Ssddanbrown\AssertHtml\HtmlTest;
 
 class HelperTest extends TestCase
 {
-    public function test_get_outer_html()
+    public function test_get_outer_html(): void
     {
         $html = new HtmlTest('
             <body>
@@ -19,7 +19,7 @@ class HelperTest extends TestCase
         $this->assertEquals('<p id="donkey">Hello</p>', $html->getOuterHtml('p#donkey'));
     }
 
-    public function test_get_inner_html()
+    public function test_get_inner_html(): void
     {
         $html = new HtmlTest('
             <body>
