@@ -84,8 +84,9 @@ class HtmlTest extends TestCase
 {
     public function test_login_has_header()
     {
-        $response = $this->get('/login');
-        $this->withHtml($response)->assertElementContains('h1#title', 'Login to my app!');
+        $this->get('/login');
+        $this->withHtml()
+            ->assertElementContains('h1#title', 'Login to my app!');
     }
 }
 ```
